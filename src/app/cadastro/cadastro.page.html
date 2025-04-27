@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" color="primary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button (click)="onClick()" expand="block" shape="round">
+    Apagar Base de Dados
+  </ion-button>
+  <ion-content class="ion-padding">
+
+    <h2>Livro</h2>
+      <ion-item>
+        <ion-input #nomeLivroInput label="Nome" label-placement="floating" placeholder="Nome do livro"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input #autorLivroInput label="Autor" label-placement="floating" placeholder="Nome do autor"></ion-input>
+      </ion-item> 
+      <ion-item>
+        <!-- <ion-input #autorLivroInput label="Status" label-placement="floating" placeholder="Nome do autor"></ion-input> -->
+        <ion-select #statusLivroInput label="Status" label-placement="floating">
+          <ion-select-option value="ler">Ler</ion-select-option>
+          <ion-select-option value="lido">Lido</ion-select-option>
+        </ion-select>
+      </ion-item> 
+    <ion-toolbar style="--background: #ffffff00;">
+      <ion-buttons slot="end">
+        <ion-button (click)="cadastrarLivro()" shape="round" fill="solid" color="primary">
+          Cadastrar Livro
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+
+    <h2>Filme</h2>
+      <ion-item>
+        <ion-input #nomeFilmeInput label="Nome" label-placement="floating" placeholder="Nome do filme"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input #diretorFilmeInput label="Diretor" label-placement="floating" placeholder="Nome do diretor"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select #statusFilmeInput label="Status" label-placement="floating">
+          <ion-select-option value="ver">Ver</ion-select-option>
+          <ion-select-option value="visto">Visto</ion-select-option>
+        </ion-select>
+      </ion-item> 
+    <ion-toolbar style="--background: #ffffff00;">
+      <ion-buttons slot="end">
+        <ion-button (click)="cadastrarFilme()" shape="round" fill="solid" color="primary">
+          Cadastrar Filme
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+
+  </ion-content>
+</ion-content>
